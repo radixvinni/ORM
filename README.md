@@ -68,7 +68,7 @@ class my_student extends DB {
 *  <code>$this->institute->my_student()->all(array('with'=>'my_exam'))->group('fio')</code> получить студентов с их экзаменами
 *  <code>$this->institute->my_student()->find(array('birth >'=>'1.1.1990','id_degree'=>array(4,5)),array('limit'=>10))</code> поиск студента
 
-Пример сохранения студента из $_REQUEST:
+Пример сохранения студента из <code>$_REQUEST</code>:
 
 ```php
 $st = $this->institute->my_student()->find_one(array('fio'=>$_REQUEST['fio']));
@@ -91,5 +91,5 @@ $student->save(array(
 Связи "имеет много" и "много ко многим" нужно сохранять отдельными вызывами:
 
 ```php
-$student->save($this->institute->my_exam()->find(array('id_expert' => $_REQUEST['exams'])));
+$student->save($this->institute->my_exam()->find(array('id_exam' => $_REQUEST['exams'])));
 ```
