@@ -1,5 +1,5 @@
 <?php
-
+/** Класс для проверки логическго объекта правилам */
 class ORM_Validation extends CI_Form_validation {
 
 	function validate(&$object, $rules)
@@ -12,10 +12,10 @@ class ORM_Validation extends CI_Form_validation {
 	}
 	
 	/**
-	 * Set Rules
+	 * Установить правила
 	 *
-	 * This function takes an array of field names and validation
-	 * rules as input, validates the info, and stores it
+	 * Эта функция принимает массив названий полей и правил
+	 * валидации, проверяет все и соханяет
 	 *
 	 * @access	public
 	 * @param	mixed
@@ -73,9 +73,7 @@ class ORM_Validation extends CI_Form_validation {
 	}
 	
 	/**
-	 * Run the Validator
-	 *
-	 * This function does all the work.
+	 * Выполнить проверку
 	 *
 	 * @access	public
 	 * @return	bool
@@ -152,7 +150,7 @@ class ORM_Validation extends CI_Form_validation {
 	}
 	
 	/**
-	 * Re-populate the data array with our finalized and processed data
+	 * Обновить массив коечными и обработанными данными
 	 *
 	 * @access	private
 	 * @return	null
@@ -208,7 +206,7 @@ class ORM_Validation extends CI_Form_validation {
 	}
 	
 	/**
-	 * Match one field to another
+	 * Сравнить одно поле с другим
 	 *
 	 * @access	public
 	 * @param	string
@@ -226,7 +224,7 @@ class ORM_Validation extends CI_Form_validation {
 	}
 	
 	/**
-	 * Checks if given value is unique in database
+	 * Проверить поле на уникальность
 	 *
 	 * @access	public
 	 * @param	string
